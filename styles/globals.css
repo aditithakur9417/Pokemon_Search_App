@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+ background-color: #F0F0F0; 
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* generic classes */
+.border {
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.centeredElement{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inputBox{
+  min-width: 300px;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.border-none:focus{
+  outline: none; /* Remove default focus outline */
+  border-color: blue; /* Change border color */
+}
+
+
+/* breadcrumb styles */
+.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #d9d9d9;
+}
+
+.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
