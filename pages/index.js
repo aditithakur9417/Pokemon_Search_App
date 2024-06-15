@@ -28,14 +28,14 @@ const Home = () => {
   };
 
   const handleTypeFilter = (type, search) => {
-    fetchPokemon(type, search);
+    fetchPokemon(type, search).then(() => setLoading(false));
   };
 
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center">
         {" "}
-        <img src={loaderGif.src} alt="Loading..." style={{height:'100px'}}/>
+        <img src={loaderGif.src} alt="Loading..." style={{ height: "100px" }} />
       </div>
     );
   }

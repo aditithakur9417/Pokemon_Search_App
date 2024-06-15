@@ -5,10 +5,12 @@ const Breadcrumb = ({ selectedPokemon }) => {
   return (
     <ul className="breadcrumb content-center w-full">
       <li>
-        <a href="/">Home</a>
+        <a className="text-base" href="/">
+          Home
+        </a>
       </li>
       <li>
-        <a>{selectedPokemon}</a>
+        <a className="text-base">{selectedPokemon}</a>
       </li>
     </ul>
   );

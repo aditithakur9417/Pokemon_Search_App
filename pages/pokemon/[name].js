@@ -32,10 +32,10 @@ const PokemonDetails = () => {
     );
   }
   return (
-    <div className="p-2 h-screen flex flex-col justify-center gap-[15%]">
+    <div className="p-1 text-base h-screen flex flex-col justify-center gap-[15%]">
       <div className="flex">
-        <a href="/" className="text-blue-500 font-bold">
-          <button className="bg-blue-500 hover:bg-blue-600 h-full text-white py-2 px-5 rounded-l-md ">
+        <a href="javascript:history.back()" className="text-blue-500 font-bold">
+          <button className="text-base bg-blue-500 hover:bg-blue-600 h-full text-white px-5 rounded-l-md ">
             Back
           </button>
         </a>
