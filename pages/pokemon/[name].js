@@ -32,16 +32,16 @@ const PokemonDetails = () => {
     );
   }
   return (
-    <div className="p-1 text-base h-screen flex flex-col justify-center gap-[10%]">
-      <div className="flex">
+    <div className="p-2 h-screen flex flex-col gap-[10%] overflow-hidden">
+      <div className="flex flex-shrink-0">
         <a href="javascript:history.back()" className="text-blue-500 font-bold">
-          <button className="text-base bg-blue-500 hover:bg-blue-600 h-full text-white px-5 rounded-l-md ">
+          <button className="bg-blue-500 hover:bg-blue-600 h-full text-white py-2 px-5 rounded-l-md">
             Back
           </button>
         </a>
         <Breadcrumb selectedPokemon={pokemon.name} />
       </div>
-      <div className="h-screen ">
+      <div className="flex-grow overflow-y-auto">
         <div className="max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden md:max-w-l hover:shadow-xl transition-shadow duration-300 ease-in-out">
           <div className="bg-[#60E2C9] p-4">
             <img
